@@ -1,0 +1,30 @@
+
+{% extends 'public/index.html' %}
+
+{% block body %}
+
+<div id="resultado" class="text-center">
+    <h4 class="text-center">Resultado <hr></h4>
+    {% if (miData) %}    <!--Si existe-->
+    <section>
+        <p>
+            Nombre y Apellido: <strong>{{ miData.nombre }} {{ miData.apellido }} </strong>               
+        </p>
+        <p>
+            Email: <strong>{{ miData.email }}</strong>            
+        </p>
+        <p>
+            Fecha de Ingreso: <strong>{{ miData.fecha_ingreso }}</strong>            
+        </p>
+    </section>
+        
+
+    {% else %}
+    <p>No hay resultados para la busqueda:
+        <strong class="busq colorCrimson"> {{ busqueda }}</strong>
+    </p>
+    {% endif %}
+
+</div>
+
+{% endblock %}
