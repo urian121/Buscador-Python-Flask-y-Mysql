@@ -2,7 +2,6 @@
 {% extends 'public/index.html' %}
 
 {% block body %}
-
 <div id="resultado" class="text-center">
     <h4 class="text-center">Resultado <hr></h4>
     {% if (miData) %}    <!--Si existe-->
@@ -18,11 +17,10 @@
         </p>
     </section>
         
-
     {% else %}
-    <p>No hay resultados para la busqueda:
-        <strong class="busq colorCrimson"> {{ busqueda }}</strong>
-    </p>
+        <p>No hay resultados para la busqueda:
+            <strong class="busq colorCrimson"> {{ busqueda }}</strong>
+        </p>
     {% endif %}
 
 </div>
